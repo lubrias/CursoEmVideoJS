@@ -17,6 +17,9 @@
         #h3 {
             color: green;
         }
+        #h4 {
+            color: purple;
+        }
     </style>
 
     
@@ -45,6 +48,13 @@
     <input type="button" value="Subtrair" onclick="subtrair()">
     <div id="res3"></div>
 
+<hr>
+
+    <h1 id="h4">Dividindo valores</h1>
+    <input type="number" name="divisaon1" id="divisaon1">
+    <input type="number" name="divisaon2" id="divisaon2">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res4"></div>
     <script>
         function somar() {
             var n1 = window.document.getElementById("soman1")
@@ -60,10 +70,10 @@
             var n1 = window.document.getElementById('multiplicacaon1')
             var n2 = window.document.getElementById('multiplicacaon2')
             var res2 = window.document.getElementById('res2')
-            var multiplicacaon1 = Number(n1.value)
+            var multiplicacao1 = Number(n1.value)
             var multiplicacao2 = Number(n2.value)
-            var m = multi1*multi2
-            res2.innerText = `A multiplicação entre ${multi1} e ${multi2} é igual à ${m}.`
+            var m = multiplicacao1*multiplicacao2
+            res2.innerText = `A multiplicação entre ${multiplicacao1} e ${multiplicacao2} é igual à ${m}.`
         }
 
         function subtrair() {
@@ -74,6 +84,16 @@
             var subtracaon2 = Number(n2.value)
             var sub = subtracaon1 - subtracaon2
             res3.innerText = `A subtração entre ${subtracaon1} e ${subtracaon2} é igual à ${sub}.`
+        }
+
+        function dividir() {
+            var n1 = window.document.getElementById('divisaon1')
+            var n2 = window.document.getElementById('divisaon2')
+            var res4 = window.document.getElementById('res4')
+            var divisaon1 = Number(n1.value)
+            var divisaon2 = Number(n2.value)
+            var div = divisaon1 / divisaon2
+            res4.innerText = `A divisão entre ${divisaon1} e ${divisaon2} é igual à ${div}.`
         }
     </script>
 </body>
