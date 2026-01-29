@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador IMC</title>
+    <style>
+        #h1 {
+            color: green
+        }
+        #p {
+            color: rgb(13, 181, 13);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Bem vindo ao calculador de IMC</h1>
+    <p id="p">Aqui é onde você vê se tá um balofo ou não.</p>
+    <hr>
+    <strong>Meu peso atual é <input type="number" name="peso" id="peso"> Kg.</strong><br><br>
+    <strong>Minha altura atual é <input type="number" name="altura" id="altura"> m.</strong><br><br>
+    <input type="button" value="Calcular" onclick="calcular()"><br>
+    <div id="res"></div>
+
+
+    <script>
+        function calcular() {
+            var peso = Number(document.getElementById('peso').value)
+            var altura = Number(window.document.getElementById('altura').value)
+            var res = window.document.getElementById('res')
+            var imc = peso / (altura * altura)
+
+                if (peso == 0 || altura == 0) {
+                    res.innerHTML = `Responda os dois campos para que possamos calcular.`
+                    return
+                }
+
+                if (altura <= 0) {
+                    res.innerHTML = `tenha honestidade pelo menos uma vez na sua vida.`
+                    return
+                }
+            
+            if (imc <18.5) {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Peso abaixo do normal.`
+            } else if (imc <25) {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Peso Normal.`
+            } else if (imc <30) {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Sobrepeso.`
+            } else if (imc <35) {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Obesidade grau 1.`
+            } else if (imc <40) {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Obesidade grau 2.`
+            } else {
+                res.innerHTML = `Seu IMC é ${imc.toFixed(2)} - Obesidade grau 3.`
+            
+        }
+    }
+    </script>
+</body>
+</html>
