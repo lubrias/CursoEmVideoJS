@@ -31,6 +31,11 @@
             var nota = Number(window.document.getElementById('nota').value)
             var res = window.document.getElementById('res')
 
+            if (nota < 0 || nota >10) {
+                res.innerHTML = `Seja mais inteligente que isso.`
+                return
+            }
+
             if (nota < 5) {
                 res.innerHTML = `Parabéns. Você foi reprovado.`
             } else if (nota < 6.9) {
