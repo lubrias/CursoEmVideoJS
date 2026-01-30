@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola do Luan</title>
+    <style>
+
+        body {
+            background-color: rgb(37, 37, 139);
+            color: white
+        }
+        #h1 {
+            color: rgb(18, 198, 198);
+        }
+        #p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Bem-vindo à escola do Luan</h1>
+    <p id="p">Digite a sua nota para saber se você passou.</p><br>
+    Minha nota foi <input type="number" name="nota" id="nota">
+    <input type="button" value="Calcular" onclick="calcularnota()">
+    <div id="res"></div>
+
+
+    <script>
+        function calcularnota() {
+            var nota = Number(window.document.getElementById('nota').value)
+            var res = window.document.getElementById('res')
+
+            if (nota < 5) {
+                res.innerHTML = `Parabéns. Você foi reprovado.`
+            } else if (nota < 6.9) {
+                res.innerHTML = `Você ficará de recuperação.`
+            } else if (nota >= 7) {
+                res.innerHTML = `Parabéns. você foi aprovado.`
+            }
+        }
+    </script>
+</body>
+</html>
