@@ -1,0 +1,1 @@
+var div1 = window.document.getElementById('div')
