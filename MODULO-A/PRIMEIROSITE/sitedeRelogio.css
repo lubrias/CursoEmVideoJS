@@ -21,3 +21,15 @@ footer {
     text-align: center;
     color: white;
 }
+
+
+img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+div {
+    text-align: center;
+    padding: 5px;
+}
