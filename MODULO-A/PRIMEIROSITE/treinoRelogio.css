@@ -22,15 +22,12 @@ footer {
     color: white;
 }
 
-#foto {
-    display: block;
-    margin: 15px auto 0 auto;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-}
 
+img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
 
 div {
     text-align: center;
