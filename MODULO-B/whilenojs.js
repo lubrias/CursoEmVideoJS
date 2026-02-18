@@ -1,8 +1,7 @@
-var numero = 0
+const frutas = ['maça','banana','uva']
 
-while (numero < 10) {
-    for (let rep = 0; rep < 10; rep++) {
-        console.log( rep + ' ainda é menor que 10')
-        numero++
-    }
+console.log('temos as seguintes frutas')
+
+for (var i = 0; i < frutas.length; i++ ) {
+    console.log((i + 1) + '-' + frutas[i])
 }
