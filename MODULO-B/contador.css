@@ -1,0 +1,8 @@
+body {
+    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section , footer {
+    text-align: center;
+}
